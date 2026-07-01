@@ -32,7 +32,7 @@
 
 \section{Introduction}
 
-The \bluett{carom} package provides a new environment together with a collection of Tik\textit{Z} macros designed to facilitate the creation of French billiards table diagrams.
+The \bluett{carom} package provides a new environment together with a collection of Ti\textit{k}Z macros designed to facilitate the creation of French billiards table diagrams.
 
 French billiards (also known as ``carom billiards'') is played on a pocketless table with only three balls. The objective is to strike the cue ball (either white or yellow, one for each player) so that it subsequently contacts the other two balls. Successfully doing so scores a point and entitles the player to continue their turn until a point is no longer scored.
 
@@ -70,7 +70,7 @@ The optional argument consists of a comma-separated list of \texttt{key=value} p
 \end{macro}
 
 \begin{macro}{scale}
-    This key is equivalent to Tik\textit{Z}’s \texttt{scale} key and follows the same semantics. It sets a scaling factor applied to the entire table. The value must be a positive floating-point number. A value of \texttt{1} corresponds to the default size, while values greater than \texttt{1} enlarge the table and values between \texttt{0} and \texttt{1} reduce its size. Negative values are not supported.
+    This key is equivalent to Ti\textit{k}Z’s \texttt{scale} key and follows the same semantics. It sets a scaling factor applied to the entire table. The value must be a positive floating-point number. A value of \texttt{1} corresponds to the default size, while values greater than \texttt{1} enlarge the table and values between \texttt{0} and \texttt{1} reduce its size. Negative values are not supported.
 \end{macro}
 
 \begin{macro}{guidelines}
@@ -144,7 +144,7 @@ The package defines many commands that are \textbf{scoped} to the \bluett{bTable
     
     It is possible not to use any of each ball’s colour-specific macro, as well as to include the same colour of ball multiple times (although this may have undesired consequences; see later).
     
-    These macros expect the coordinates of a point, followed by a semicolon (following standard Tik\textit{Z} conventions).\medskip
+    These macros expect the coordinates of a point, followed by a semicolon (following standard Ti\textit{k}Z conventions).\medskip
 
     \begin{minipage}{.53\linewidth}
         \begin{bTable}[scale=.82]
@@ -184,7 +184,7 @@ The package defines many commands that are \textbf{scoped} to the \bluett{bTable
 \end{macro}
 
 \begin{macro}{\draw,\dash}
-    These commands are used to draw trajectories on the board. The \bluett{\textbackslash draw} command is based on the standard Tik\textit{Z} one, with additional handling to integrate with the package’s layer system. The \bluett{\textbackslash dash} command is provided as a convenience alias for a \texttt{densely dashed} version of \bluett{\textbackslash draw}.
+    These commands are used to draw trajectories on the board. The \bluett{\textbackslash draw} command is based on the standard Ti\textit{k}Z one, with additional handling to integrate with the package’s layer system. The \bluett{\textbackslash dash} command is provided as a convenience alias for a \texttt{densely dashed} version of \bluett{\textbackslash draw}.
     
     Note that, regardless of where these macros are used in the environment's code, balls will always render \textit{above} all path elements.
 \end{macro}
@@ -242,7 +242,7 @@ We now give an example of a diagram, where we display how to perform the game's 
 \begin{macro}{\Box,\ShadedRegion,\ShadedBox}
     These macros allow the user to delimit rectangular areas on the table, often indicating where a given set of balls should be located after a shot is played.
 
-    These macros expect two point coordinates, separated by \texttt{--} and terminated by a semicolon, as is standard with Tik\textit{Z} commands.
+    These macros expect two point coordinates, separated by \texttt{--} and terminated by a semicolon, as is standard with Ti\textit{k}Z commands.
 \end{macro}
 
 \begin{macro}{\blBox,\brBox,\tlBox,\trBox}
@@ -338,7 +338,7 @@ To indicate how the cue ball should be struck and how to aim at the object ball,
 
 \subsection{Inside the \bluett{bTable} Environment}
 
-This command takes an optional argument and a mandatory one. The mandatory argument is a real number between $-1$ and $1$, indicating the contact point on the object ball; it represents how thickly the ball is struck, with the sign determining whether the shot is taken from the left or the right. The optional argument has the form \texttt{<angle>:<radius>} and specifies, in polar coordinates (see the diagram below), the point at which the cue strikes the cue ball. The angle is set in \textit{degrees}, and the radius is expected to be between $0$ and $1$. The macro must be terminated with a semicolon, as is standard for many Tik\textit{Z} commands.
+This command takes an optional argument and a mandatory one. The mandatory argument is a real number between $-1$ and $1$, indicating the contact point on the object ball; it represents how thickly the ball is struck, with the sign determining whether the shot is taken from the left or the right. The optional argument has the form \texttt{<angle>:<radius>} and specifies, in polar coordinates (see the diagram below), the point at which the cue strikes the cue ball. The angle is set in \textit{degrees}, and the radius is expected to be between $0$ and $1$. The macro must be terminated with a semicolon, as is standard for many Ti\textit{k}Z commands.
 
 \begin{center}
     \begin{tikzpicture}[scale=2]
@@ -419,7 +419,7 @@ The macro is still named \bluett{\textbackslash Qty}, and its syntax remains unc
     {\color{blue}\verb|\Qty<guidelines>[90:.7]{-.5}|}
 \end{minipage}
 
-\section{Tik\textit{Z} Layering}
+\section{Ti\textit{k}Z Layering}
 
 No clipping path is applied to user-defined drawings; consequently, graphical elements may extend beyond the boundaries of the table.
 
