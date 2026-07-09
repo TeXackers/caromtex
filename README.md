@@ -1,6 +1,6 @@
 # carom-billiards
 
-The `carom-billiards` package provides a new environment together with a collection of Tik*Z* macros designed to facilitate the creation of French billiards table diagrams.
+The `carom-billiards` package provides a new environment together with a collection of Ti*k*Z macros designed to facilitate the creation of French billiards table diagrams.
 
 This package provides tools for indicating ball positions on the table, as well as the intended point of impact on the cue ball and the desired aiming point on the object ball.
 
@@ -14,6 +14,6 @@ will draw a billiard table, and the inner code `[...]` serves as a list of annot
 
 This package may be used in LaTeX by `\usepackage{carom-billiards}`.
 
-Copyright (C) 2026 Anthony Saint-Criq
+Copyright © 2026 Anthony Saint-Criq
 
 This package is released under the LaTeX Project Public License (LPPL) 1.3c.
